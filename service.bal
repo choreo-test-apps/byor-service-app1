@@ -13,6 +13,9 @@ type BookItem record {|
     string status;
 |};
 
+
+
+
 type Book record {|
     *BookItem;
     string book_id;
