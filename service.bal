@@ -2,6 +2,7 @@ import ballerina/uuid;
 import ballerina/http;
 import ballerina/log;
 
+configurable string invke_url = ?;
 
 enum Status {
     reading = "reading",
