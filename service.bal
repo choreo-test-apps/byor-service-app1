@@ -2,7 +2,6 @@ import ballerina/uuid;
 import ballerina/http;
 import ballerina/log;
 
-configurable string invke_url = ?;
 
 enum Status {
     reading = "reading",
@@ -39,7 +38,6 @@ map<Book> books = {
     bookId3: book3
 };
 
-http:Client clientEndpoint = check new (invke_url);
 
 service /readinglist on new http:Listener(9090) {
 
