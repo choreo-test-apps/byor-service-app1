@@ -39,6 +39,8 @@ map<Book> books = {
     bookId3: book3
 };
 
+http:Client clientEndpoint = check new (invke_url);
+
 service /readinglist on new http:Listener(9090) {
 
     resource function get books() returns Book[]|error? {
